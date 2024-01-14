@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+        
+        <!--font awesome-->
+        <!--https://sakuweb.liruu.com/tips/tipsfont-awesome%E3%81%A7%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3%E3%82%92%E4%BD%BF%E3%81%8A%E3%81%86%EF%BC%81/-->
+        <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+        <!--jQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+
+        <!--https://www.jsdelivr.com/-->
+        <script src="https://cdn.rawgit.com/codrops/Arctext/master/js/jquery.arctext.js"></script>
+
+        <!--https://toretama.jp/return-top-button-scroll.html-->
+        <!--上に戻るボタン-->
+        <script>
+          jQuery(document).ready(function() {
+          var offset = 100;
+          var duration = 500;
+          jQuery(window).scroll(function() {
+          if (jQuery(this).scrollTop() > offset) {
+          jQuery('.pagetop').fadeIn(duration);
+          } else {
+          jQuery('.pagetop').fadeOut(duration);
+          }
+          });
+          
+          jQuery('.pagetop').click(function(event) {
+          event.preventDefault();
+          jQuery('html, body').animate({scrollTop: 0}, duration);
+          return false;
+          })
+          });
+        </script>
+          
+    </head>
+
+    <body>
+      <!--ヘッダー-->
+      <section>
+        <nav class="navbar navbar-dark fixed-top" style="background-color: rgb(226,226,226);">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#" style="color: black; margin-left: 20px;">GOURMET COMPASS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li>
+                        <hr class="dropdown-divider">
+                      </li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+
+      <!--タイトル-->
+      <section style="background-color:rgb(226,226,226); margin-top: 50px;  padding-top: 100px; padding-bottom: 50px; padding-left: 20%;">
+        <h1>
+          GOURMET<br>COMPASS
+        </h1>
+        <div>
+          グルメコンパスは<br>
+          いつか行ってみたいお店や、もう一度行きたいお店を<br>
+          かんたんにマイリスト化してくれるサービスです。<br>
+          お店選びがたのしくなること間違いなし!<br>
+        </div>
+      </section>
+
+      <!--概要-->
+      <section style="background-color: white; padding-top: 100px;">
+        <div style="text-align: center;">
+            <h2>
+              GOURMET COMPASS
+            </h2>
+            <h6>
+              グルメコンパスでできること
+            </h6>
+        </div>
+        
+        <div class="item">
+          <div class="parent1">
+            <div class="cilid1">
+              <h2>01</h2>
+              <div class="circle">
+              </div>
+              <div style="line-height: 2em; padding-top: 10px;">
+                もう一度訪れたい<br>お店を登録
+              </div>
+            </div>
+            <div class="cilid1">
+              <h2>02</h2>
+              <div class="circle">
+              </div>
+              <div style="line-height: 2em; padding-top: 10px;">
+                食べたいものから<br>訪れたいお店を発見
+              </div>
+            </div>
+            <div class="cilid1">
+              <h2>03</h2>
+              <div class="circle">
+              </div>
+              <div style="line-height: 2em; padding-top: 10px;">
+                あなただけの<br>マイリストがここに
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <style>
+        .item {
+          text-align: center;
+        }
+        .parent1 {
+          margin-top: 20px;
+          margin-left: 15%;
+          margin-right: 15%;
+          display: flex;
+          justify-content: center;
+          justify-content: space-around;
+          width: 70%;
+          /*border: 1px solid #000;*/
+        }
+        .cilid1 {
+          text-align: center;
+          width: 20%;
+          /*border: 1px solid #000;*/
+        }
+        .circle {
+          border: 1px solid #000;
+          border-radius: 50%;
+          padding-left: 20%;
+          /* https://web-shindanshi.jp/wordpress-knkei/csshtml/ */
+          width: 100%;
+          padding-top: 100%;
+          /*円の中に背景画像を入れる*/
+          background:url(#) center;
+        }
+      </style>
+
+      <!--お店を登録-->
+      <section style="background-color: white; padding-top: 100px;">
+        <div style="text-align: center;">
+          <h2>
+            01<br>お店を登録
+          </h2>
+          <h6>
+            またいきたいあのおみせ
+          </h6>
+        </div>
+
+        <div class="input-group" style="padding-left: 30%; padding-right: 30%; padding-top: 10px;">
+          <input type="text" class="form-control" placeholder="店舗名">
+          <button class="btn btn-outline-dark" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+        </div>
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="#" class="btn-circle-flat">検索</a>
+        </div>
+        <div style="line-height: 2em; padding-top: 10px; text-align: center;">
+          お店の名前から検索してみよう。<br>
+          「また行きたいお店」として <br>
+          マイリストに登録できます。
+        </div>
+      <style>
+        .btn-circle-flat {
+          display: inline-block;
+          text-decoration: none;
+          background: #000000;
+          color: #FFF;
+          font-size: 20px;
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          
+          border-radius: 50%;
+          text-align: center;
+          overflow: hidden;
+          transition: .4s;
+        }
+
+        .btn-circle-flat:hover {
+          background: #3a3a3a;
+        }
+      </style>
+
+      </section>
+
+      <!--食べたいもの検索-->
+      <section style="background-color: white; padding-top: 100px;">
+        <div style="text-align: center;">
+          <h2>
+            02<br>食べたいもの検索
+          </h2>
+          <h6>
+            今日は何の気分？
+          </h6>
+        </div>
+
+        <div style="padding-left: 30%; padding-right: 50%; padding-top: 20px;" >
+          <select class="form-select" aria-label="Default select example">
+            <option selected>東京</option>
+            <option value="1">神奈川</option>
+            <option value="2">シベリア</option>
+            <option value="3">南極</option>
+          </select>
+        </div>
+
+        <div class="input-group" style="padding-left: 30%; padding-right: 30%; padding-top: 10px;">
+          <input type="text" class="form-control" placeholder="なんでも検索">
+          <button class="btn btn-outline-dark" type="button" id="button-addon2"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div style="text-align: center; padding-top: 20px;">
+          タグ一覧をここに配置
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <a href="#" class="btn-circle-flat">検索</a>
+        </div>
+
+        <div style="line-height: 2em; padding-top: 10px; text-align: center;">
+          食べたいものから検索してみよう。<br>
+          「行ってみたいお店」として <br>
+          マイリストに登録できます。
+        </div>
+      </section>
+      <!--マイリスト-->
+      <section style="background-color: white; padding-top: 100px;">
+        <div style="text-align: center;">
+          <h2>
+            03<h2 class="arch">マイリスト</h2>
+          </h2>
+        </div>
+        
+        <div style="margin-left: 45%; margin-right: 45%; text-align: center;">
+          <!--<div class="double-circle-1"></div>-->
+          <div class="circle"></div>
+        </div>
+
+        <div style="line-height: 2em; padding-top: 10px; text-align: center;">
+          「もう一度行きたいお店」と<br>
+          「いつか行ってみたいお店」が一覧に。 <br>
+          マイリストからお店を選ぼう！
+        </div>
+
+        <style>
+          .arch {
+            font-size: 30px;
+            font-weight: bold;
+            /*margin-bottom: 40px;*/
+          }
+
+          .arch span {
+            -webkit-background-clip: text;
+            background-clip: text;
+          }
+
+          /* https://1-notes.com/css-shape-double-circle-design/ */
+          
+          .double-circle-1 {
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border: solid #4169e1 5px;
+            border-radius: 50%;
+            box-sizing: border-box;
+          }
+
+          .double-circle-1::before {	
+            content: "";
+            width: 120px;
+            height: 120px;
+            text-align: center;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: solid #4169e1 5px;
+            border-radius: 50%;
+            box-sizing: border-box;
+          }
+
+        </style>
+
+        <script>
+          $(document).ready(function() {
+            $(".arch").arctext({radius: 100});
+          });
+        </script>
+
+      </section>
+
+      <!--上に戻るボタン-->
+      <style>
+        /* 上に戻るボタン */
+        .pagetop {
+          color: #fff;
+          background-color: rgba(0,0,0);
+          text-decoration: none;
+          display: none;
+          position: fixed;
+          bottom: 1rem;
+          right: 1rem;
+          font-size: 1.5rem;
+          width: 3.3rem;
+          height: 3.3rem;
+          line-height: 3.3rem;
+          border-radius: 3.3rem;
+          text-align: center;
+          cursor: pointer;
+        }
+        
+        .pagetop:hover {
+          color: #fff !important;
+          background-color: #000000;
+          text-decoration: none;
+        }
+      </style>
+
+      <div class="pagetop" style="font-size: 10px;">
+        TOP
+      </div>
+
+    </body>
+
+    <footer style="margin-left: 15%; padding-top: 50px; padding-bottom: 10px;">
+      GOURMET COMPASS
+    </footer>
+</html>
